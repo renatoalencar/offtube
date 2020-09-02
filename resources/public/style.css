@@ -1,0 +1,105 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header { 
+  height: 50px;
+  padding: 0 20px;
+  padding-bottom: 40px;
+}
+
+header .logo-link {
+  float: left;
+  text-decoration: none;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header nav {
+  float: right;
+  padding: 0 30px;
+}
+
+header nav a {
+  color: #3749EE;
+  padding: 0 12px;
+  border-right: 2px solid #939393;
+}
+
+header nav a:last-child {
+  border-right: none;
+}
+
+.video-item {
+  text-decoration: none;
+  color: black;
+  width: 350px;
+  display: block;
+  max-width: 100%;
+
+  float: left;
+  margin: 20px;
+  margin-top: 0;
+}
+
+.video-item img {
+  width: 100%;
+  background: url('./placeholder.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 200px;
+}
+
+.video-item .title {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 3em;  
+}
+
+.video-item .duraton {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: -35px;
+  float: right;
+  padding: 4px;
+  margin: 0 10px;
+  backdrop-filter: blur(9px);
+}
+
+.video-page {
+  padding: 0 20px;
+}
+
+.video-page .video-container {
+  width: 60%;
+  float: left;
+}
+
+.video-page .video-container video {
+  width: 100%;
+}
+
+.video-page .suggested {
+  width: 30%;
+  float: left;
+  margin-left: 5%;
+}
+
+.video-page .video-container .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.upload-form, .youtube-form {
+  padding: 0 20px;
+}

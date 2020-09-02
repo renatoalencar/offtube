@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: 'postgres'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: media
+      POSTGRES_PASSWORD: media
+      POSTGRES_DB: media
+  http:
+    image: 'nginx'
+    volumes:
+      - ./assets:/usr/share/nginx/html
+    ports:
+      - 8081:80
+  mq:
+    image: redis
+    ports:
+      - 6379:6379
