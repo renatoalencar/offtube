@@ -49,12 +49,12 @@
 
 (def common-interceptors [(body-params/body-params) (ring-mw/multipart-params) http/html-body ])
 
-(def routes #{["/" :get (conj common-interceptors `videos)]
-              ["/video" :get (conj common-interceptors `video)]
-              ["/upload" :get (conj common-interceptors `video-upload-form)]
-              ["/upload" :post (conj common-interceptors `video-upload)]
+(def routes #{["/"        :get  (conj common-interceptors `videos)]
+              ["/video"   :get  (conj common-interceptors `video)]
+              ["/upload"  :get  (conj common-interceptors `video-upload-form)]
+              ["/upload"  :post (conj common-interceptors `video-upload)]
 
-              ["/youtube" :get (conj common-interceptors `youtube-form)]
+              ["/youtube" :get  (conj common-interceptors `youtube-form)]
               ["/youtube" :post (conj common-interceptors `youtube-download)]})
 
 (def service {:env :prod
