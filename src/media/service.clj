@@ -31,7 +31,7 @@
 
 (defn video-upload
   [request]
-  (let [{:keys [filename temfile]} (get-in request [:params "video"])]
+  (let [{:keys [filename tempfile]} (get-in request [:params "video"])]
     (jobs/process filename (.getAbsolutePath tempfile)))
 
   (ring-resp/redirect "/"))
